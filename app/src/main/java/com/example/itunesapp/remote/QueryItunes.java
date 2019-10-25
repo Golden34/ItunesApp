@@ -4,7 +4,10 @@ import android.content.Context;
 import android.os.AsyncTask;
 import android.util.Log;
 
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.example.itunesapp.ItunesActivity;
+import com.example.itunesapp.R;
 import com.example.itunesapp.dto.ResultadoCanciones;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -14,6 +17,7 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLEncoder;
+import java.util.ArrayList;
 
 public class QueryItunes extends AsyncTask<String, Void, ResultadoCanciones> {
 
@@ -64,9 +68,8 @@ public class QueryItunes extends AsyncTask<String, Void, ResultadoCanciones> {
             Gson gson = new Gson();
             //respuesta = httpConn.getResponseCode();
             if (httpURLConnection.getResponseCode() == HttpURLConnection.HTTP_OK) {
-                is = new InputStreamReader(httpURLConnection.getInputStream());
+                is = new InputStreamReader(httpURLConnection.getInputStream()); //lee del BODY, extrae los datos
                 rc = gson.fromJson(is, ResultadoCanciones.class);
-
             }
 
 

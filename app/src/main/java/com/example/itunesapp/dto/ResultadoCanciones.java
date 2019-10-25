@@ -7,8 +7,6 @@ public class ResultadoCanciones {
     private int resultCount;
     private List<Cancion> results;
 
-
-
     public ResultadoCanciones (){
 
     }

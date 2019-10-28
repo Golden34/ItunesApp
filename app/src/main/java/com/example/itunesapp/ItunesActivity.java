@@ -44,7 +44,7 @@ public class ItunesActivity extends AppCompatActivity {
         recView = (RecyclerView) findViewById(R.id.RecView);
         //recView.setHasFixedSize(true);//opcional, si sé que el tamaño no va a cambiar
 
-        adaptador = new AdapterCanciones(rc);
+        adaptador = new AdapterCanciones((ArrayList<Cancion>) rc.getResults());
         recView.setAdapter(adaptador);
         recView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
         //recView.setLayoutManager(new GridLayoutManager(this,3));
@@ -54,10 +54,6 @@ public class ItunesActivity extends AppCompatActivity {
         //ITEM DECORATOR --> OPCIONAL
 
         recView.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL));
-
-
-
-
 
     }
 

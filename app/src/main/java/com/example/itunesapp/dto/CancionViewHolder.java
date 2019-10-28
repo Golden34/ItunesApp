@@ -24,7 +24,7 @@ public class CancionViewHolder extends RecyclerView.ViewHolder {
 
     public void cargarLibroEnHolder(Cancion c) {
         text_view_artistName.setText(c.getArtistName());
-        text_view_trackId.setText(c.getTrackId());
+        text_view_trackId.setText(String.valueOf(c.getTrackId()));  // OJOOOOOO !!!!
         text_view_trackName.setText(c.getTrackName());
     }
 }

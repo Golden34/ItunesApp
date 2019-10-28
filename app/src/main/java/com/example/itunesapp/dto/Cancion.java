@@ -6,6 +6,8 @@ public class Cancion {
     private String artistName;
     private int trackId;
     private String trackName;
+    private String artworkUrl100;//la URI de la imagen de la portada del disco/canción
+
 
     public Cancion ()
     {
@@ -16,6 +18,7 @@ public class Cancion {
         this.artistName = artistName;
         this.trackId = trackId;
         this.trackName = trackName;
+        this.artworkUrl100 = artworkUrl100;
     }
 
     public String getArtistName() {
@@ -41,4 +44,13 @@ public class Cancion {
     public void setTrackName(String trackName) {
         this.trackName = trackName;
     }
+
+    public String getArtworkUrl100() {
+        return artworkUrl100;
+    }
+
+    public void setArtworkUrl100(String artworkUrl100) {
+        this.artworkUrl100 = artworkUrl100;
+    }
+
 }
